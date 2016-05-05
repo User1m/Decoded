@@ -1,0 +1,16 @@
+{
+  "name": "Food Truck Tracker APP",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "http": "0.0.0",
+    "jsonpath": "^0.1.3"
+  },
+  "engines": {
+    "node": "0.12.x"
+  }
+}
