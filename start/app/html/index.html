@@ -18,7 +18,53 @@
         }
     </style>
 </head>
-<body>
-<h1>Hello World</h1>
+<body ng-app="myApp" ng-controller="FoodtrucksListController">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand">Food Truck Tracker</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="starter-template">
+            <h1>Food trucks</h1>
+            <p class="lead">{{status}}</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Likes</th>
+                        <th>Savory</th>
+                        <th>Sweet</th>
+                        <th>Vegeterian</th>
+                        <th>Bookable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="truck in trucks">
+                        <td>{{truck.id}}</td>
+                        <td>{{truck.name}}</td>
+                        <td>{{truck.city}}</td>
+                        <td>{{truck.likes}}</td>
+                        <td>{{convertToBoolText(truck.savory)}}</td>
+                        <td>{{convertToBoolText(truck.sweet)}}</td>
+                        <td>{{convertToBoolText(truck.vegetarian)}}</td>
+                        <td>{{convertToBoolText(truck.bookable)}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><!-- /.container -->
+    <script type="text/javascript">
+        //TODO: angluar code
+    </script>
 </body>
 </html>
