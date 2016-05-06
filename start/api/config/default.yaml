@@ -19,7 +19,7 @@ swagger:
 
     _swagger_validate:
       name: swagger_validator
-      validateResponse: true
+      validateResponse: false  #dafault is 'true' but for simplicity in responding with json change to 'false'
 
     # pipe for all swagger-node controllers
     swagger_controllers:
